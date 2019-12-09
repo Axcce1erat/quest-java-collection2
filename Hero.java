@@ -32,6 +32,6 @@ public class Hero implements Comparable<Hero> {
     @Override
     // The default sort order should be alphabetically by the name attribute.
     public int compareTo(Hero hero) {
-        return name.compareTo(hero.name);
+        return this.name.compareTo(hero.name);
     }
 }
