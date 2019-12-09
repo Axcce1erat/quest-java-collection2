@@ -1,4 +1,5 @@
-public class Hero {
+// Modify the Hero class by using the Comparable class.
+public class Hero implements Comparable<Hero> {
 
     // attributs
     private String name;
@@ -26,5 +27,11 @@ public class Hero {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    // The default sort order should be alphabetically by the name attribute.
+    public int compareTo(Hero hero) {
+        return name.compareTo(hero.name);
     }
 }
